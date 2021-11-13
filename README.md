@@ -3,6 +3,33 @@ This repository contains stubs of TIBCO FOS Process Components.
 
 Documentation: [Stubs](https://sky.atlassian.net/wiki/spaces/CRM/pages/1167655428/Stubs)
 
+# Directory Structure
+Following is the project directory structure:
+```
+TIBCO-FOS-Stubs
+|- pom.xml
+|- .gitignore
+|- README.md
+|- lib
+    |- com
+        |- ...
+    |- javax
+        |- ...
+    |- org
+        |- ...
+|- src
+    |- main
+        |- java
+            |- ...
+        |- resorces
+            |- ...
+```
+Folder `lib` is treated as a local repository for building this maven project. So all the dependencies (`.jar` files) reside inside `lib` folder.
+
+Folder `src/main/resources` contains the configuration files required for executing stubs.
+
+Folder `src/main/java` contains the source code in `.java` files.
+
 # Steps to run TIBCO FOS Stubs
 ### Pre-requisite
 * Installation of Java JDK 
