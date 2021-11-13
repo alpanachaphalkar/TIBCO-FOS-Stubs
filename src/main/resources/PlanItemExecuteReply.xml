@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:PlanItemExecuteReply xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns4="http://www.tibco.com/AFF/V4.0.0/classes/resultstatus" xmlns:ns2="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/execution" correlationID="54ff85ce-39a4-4445-aa88-82cddf9746a7" businessTransactionID="fa3b0aa3a9de47458ecada509177d933">
+    <ns4:resultStatus>
+        <ns4:deployment>ACCENTURE_Java_Stub_TestHarness</ns4:deployment>
+        <ns4:service>PlanItemExecuteStub</ns4:service>
+        <ns4:operation>Execution</ns4:operation>
+        <ns4:component>TestHarness</ns4:component>
+        <ns4:severity>S</ns4:severity>
+        <ns4:code />
+        <ns4:message />
+    </ns4:resultStatus>
+    <ns2:orderID>#ORDER_ID#</ns2:orderID>
+    <ns2:orderRef>#ORDER_REF#</ns2:orderRef>
+    <ns2:planID>#PLAN_ID#</ns2:planID>
+    <ns2:planItemID>#PLAN_ITEM_ID#</ns2:planItemID>
+    <ns2:completed>#COMPLETED#</ns2:completed>
+    <ns2:success>#SUCCESS#</ns2:success>
+    <ns2:cancelled>#CANCELLED#</ns2:cancelled>
+</ns2:PlanItemExecuteReply>

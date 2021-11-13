@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns21:PlanItemExecuteRequest xmlns:ns21="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/execution" xmlns:ns40="http://www.tibco.com/aff/orderservice" xmlns:ns39="http://www.tibco.com/aff/internalerrorhandler" xmlns:ns38="http://www.tibco.com/fom/customAuditTrail" xmlns:ns37="http://www.tibco.com/aff/eca/model" xmlns:ns36="http://www.tibco.com/aff/eca/model/service" xmlns:ns35="http://www.tibco.com/AFF/classes/pricemodel" xmlns:ns34="http://www.tibco.com/AFF/classes/discountmodel" xmlns:ns33="http://www.tibco.com/AFF/classes/action" xmlns:ns32="http://www.tibco.com/AFF/classes/role" xmlns:ns31="http://www.tibco.com/AFF/classes/customer" xmlns:ns30="http://www.tibco.com/AFF/classes/customermodel" xmlns:ns29="http://www.tibco.com/AFF/classes/productmodel" xmlns:ns28="http://www.tibco.com/AFF/classes/segment" xmlns:ns27="http://www.tibco.com/aff/planfragments" xmlns:ns26="http://www.tibco.com/aff/plan" xmlns:ns25="http://www.tibco.com/aff/commontypes" xmlns:ns24="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/plan" xmlns:ns23="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/order" xmlns:ns22="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/model" xmlns:ns20="http://www.tibco.com/AFF/V4.0.0/services/transientDataStore" xmlns:ns19="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/data" xmlns:ns18="http://www.tibco.com/AFF/V4.0.0/classes/planFragment" xmlns:ns17="http://www.tibco.com/AFF/V4.0.0/classes/resultstatus" xmlns:ns16="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/provider" xmlns:ns15="http://www.tibco.com/AFF/V4.0.0/types/commontypes" xmlns:ns14="http://www.tibco.com/AFF/V4.0.0/classes/order" xmlns:ns13="http://www.tibco.com/AFF/V4.0.0/classes/orchestrator/processComponentModel" xmlns:ns12="http://www.tibco.com/AFF/V4.0.0/applications/orchestrator/plan" xmlns:ns11="http://www.tibco.com/AFF/V4.0.0/applications/orchestrator/order" xmlns:ns10="http://www.tibco.com/AFF/V4.0.0/applications/orchestrator/message" xmlns:ns9="http://www.tibco.com/AFF/V4.0.0/applications/orchestrator/notification" xmlns:ns8="http://www.tibco.com/AFF/V4.0.0/applications/orchestrator/aopd" xmlns:ns7="www.tibco.com/be/ontology/OfferConfigurationAndValidation/Events/AOPD/Events/PlanDevelopment/ExecutionPlanNewRequest" xmlns:ns6="http://www.tibco.com/AFF/executionPlan/ExecutionPlanAmendResponse" xmlns:ns5="www.tibco.com/be/ontology/OfferConfigurationAndValidation/Events/Amendments/Events/ExecutionPlanAmendRequest" xmlns:ns4="http://www.tibco.com/AFF/OCV/services" xmlns:ns3="http://www.tibco.com/AFF/classes/inventory" xmlns:ns2="http://www.staffware.com/frameworks/gen/valueobjects" xmlns="http://www.tibco.com/AFF/classes/resultstatus" businessTransactionID="fa3b0aa3a9de47458ecada509177d933" correlationID="54ff85ce-39a4-4445-aa88-82cddf9746a7">
+    <ns21:orderID>840</ns21:orderID>
+    <ns21:orderRef>ORDER_PI10_SPRINT2_FULF44-011</ns21:orderRef>
+    <ns21:planID>841</ns21:planID>
+    <ns21:planItem>
+        <ns21:planItemID>9</ns21:planItemID>
+        <ns21:description>Plan to query billing account</ns21:description>
+        <ns21:processComponentID>SKY_B_ACCOUNT_PLNFRG</ns21:processComponentID>
+        <ns21:processComponentName>BillingAccountPlan</ns21:processComponentName>
+        <ns21:processComponentVersion>V01</ns21:processComponentVersion>
+        <ns21:processComponentType>sky.brmaccount</ns21:processComponentType>
+        <ns21:processComponentRecordType>Process</ns21:processComponentRecordType>
+        <ns21:orderLine>
+            <ns21:orderLineNumber>1</ns21:orderLineNumber>
+            <ns21:productID>SKY_RESIDENTIAL_ACCESS</ns21:productID>
+            <ns21:productVersion>PL001</ns21:productVersion>
+            <ns21:action>PROVIDE</ns21:action>
+            <ns21:quantity>1</ns21:quantity>
+            <ns21:uom>UOM</ns21:uom>
+            <ns21:subscriberID>Main bundle for residential</ns21:subscriberID>
+            <ns21:eol>false</ns21:eol>
+        </ns21:orderLine>
+        <ns21:action>PROVIDE</ns21:action>
+    </ns21:planItem>
+    <ns21:sla>
+        <ns21:typicalDuration>0</ns21:typicalDuration>
+        <ns21:maximumDuration>0</ns21:maximumDuration>
+    </ns21:sla>
+</ns21:PlanItemExecuteRequest>

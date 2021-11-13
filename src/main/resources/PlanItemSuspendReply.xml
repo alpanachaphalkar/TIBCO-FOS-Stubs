@@ -1,0 +1,17 @@
+<ns14:PlanItemSuspendReply xmlns:ns14="http://www.tibco.com/AFF/V4.0.0/services/orchestrator/execution" xmlns:pfx="http://www.tibco.com/AFF/V4.0.0/classes/resultstatus" xmlns:xsd="http://www.w3.org/2001/XMLSchema" businessTransactionID="b98c070f-fc97-4699-b62f-d28279e0c071" correlationID="ID:EMS-SERVER.1F1A5FD9E68C136:1821190">
+  <pfx:resultStatus>
+    <pfx:deployment>ACCENTURE_Java_Stub_TestHarness</pfx:deployment>
+    <pfx:service>PlanItemSuspendStub</pfx:service>
+    <pfx:operation>Suspend</pfx:operation>
+    <pfx:component>TestHarness</pfx:component>
+    <pfx:severity>S</pfx:severity>
+    <pfx:code/>
+    <pfx:message/>
+  </pfx:resultStatus>
+  <ns14:orderID>#ORDER_ID#</ns14:orderID>
+  <ns14:orderRef>#ORDER_REF#</ns14:orderRef>
+  <ns14:planID>#PLAN_ID#</ns14:planID>
+  <ns14:planItemID>#PLAN_ITEM_ID#</ns14:planItemID>
+  <ns14:completed>#COMPLETED#</ns14:completed>
+  <ns14:success>#SUCCESS#</ns14:success>
+</ns14:PlanItemSuspendReply>
