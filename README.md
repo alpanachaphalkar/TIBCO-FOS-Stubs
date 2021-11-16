@@ -39,7 +39,12 @@ Folder `src/main/java` contains the source code in `.java` files.
 Maven is used as build tool for building, deploying and running this Java project.
 
 ### Steps
-**Step 1**: Configure environment variables
+**Step 1**: Clone the repository
+```
+git clone https://github.com/alpanachaphalkar/TIBCO-FOS-Stubs.git
+```
+
+**Step 2**: Configure environment variables
 ```
 TIBCO_EMS_SERVER_HOST
 TIBCO_EMS_SERVER_PORT
@@ -53,12 +58,12 @@ Connection string for TIBCO EMS Server:
 ssl://$TIBCO_EMS_SERVER_HOST:$TIBCO_EMS_SERVER_PORT
 ```
 
-**Step 2**: Clean and Install all dependencies
+**Step 3**: Clean and Install all dependencies
 ```
 mvn clean install
 ```
 
-**Step 3**:  Execute Stubs with main method
+**Step 4**:  Execute Stubs with main method
 ```
 mvn exec:java  -Dexec.mainClass=Stubs
 ```
