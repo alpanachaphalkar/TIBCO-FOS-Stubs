@@ -19,6 +19,7 @@ public class EmsProducerTest {
     private String serverUrl;
     private String userName;
     private String password;
+    private String certificatePath;
     private String testRequestXml;
     private String testRequestQueue;
 
@@ -30,10 +31,11 @@ public class EmsProducerTest {
      * @param _requestXml as String, name of request xml file.
      * @param _requestQueue as Strung, name of queue to which request will be sent.
      */
-    EmsProducerTest(String _serverUrl, String _userName, String _password, String _requestXml, String _requestQueue){
+    EmsProducerTest(String _serverUrl, String _userName, String _password, String _certificatePath, String _requestXml, String _requestQueue){
         this.serverUrl = _serverUrl;
         this.userName = _userName;
         this.password = _password;
+        this.certificatePath = _certificatePath;
         this.testRequestXml = _requestXml;
         this.testRequestQueue = _requestQueue;
     }
@@ -41,9 +43,8 @@ public class EmsProducerTest {
     public void run() throws JMSException, URISyntaxException {
         System.out.println("########################## PUBLISHER  ##########################");
         System.out.println("Test Producing message to destination (queue): \n   " + this.testRequestQueue + "\n");
-        String trustedCertFilePath = Utils.getResourceFile("cert.pem").getAbsolutePath();
         Hashtable<String, Object> environment = new Hashtable<>();
-        environment.put("com.tibco.tibjms.ssl.trusted_certs", trustedCertFilePath);
+        environment.put("com.tibco.tibjms.ssl.trusted_certs", this.certificatePath);
         environment.put("com.tibco.tibjms.ssl.expected_hostname", this.serverUrl);
         environment.put("com.tibco.tibjms.ssl.enable_verify_hostname", Boolean.FALSE);
         environment.put("com.tibco.tibjms.ssl.enable_verify_host", Boolean.FALSE);
@@ -103,6 +104,7 @@ public class EmsProducerTest {
         EmsProducerTest emsProducerTest = new EmsProducerTest(
                 fosConfig.getEmsServer(),
                 fosConfig.getUser(), fosConfig.getPassword(),
+                fosConfig.getCertificatePath(),
                 fosConfig.getTestRequestXML(), fosConfig.getTestRequestQueue()
         );
         System.out.println("################################################################");

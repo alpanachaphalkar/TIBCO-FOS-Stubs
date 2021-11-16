@@ -44,8 +44,8 @@ public class ReadFosConfig {
     }
 
     /**
-     * Reads stubs conf as properties and gets EMS server connection url.
-     * @return EMS server connection url.
+     * Reads the environment variables TIBCO_EMS_SERVER_HOST and TIBCO_EMS_SERVER_PORT
+     * @return TIBCO EMS server connection url.
      */
     public String getEmsServer() {
         String TIBCO_EMS_SERVER_HOST = System.getenv("TIBCO_EMS_SERVER_HOST");
@@ -57,7 +57,7 @@ public class ReadFosConfig {
     }
 
     /**
-     * Reads stubs conf as properties and gets EMS server user for authentication.
+     * Reads the environment variable TIBCO_EMS_USERNAME
      * @return EMS server user.
      */
     public String getUser(){
@@ -65,11 +65,19 @@ public class ReadFosConfig {
     }
 
     /**
-     * Reads stubs conf as properties and gets EMS server user password authentication.
+     * Reads the environment variable TIBCO_EMS_PASSWORD
      * @return EMS server password.
      */
     public String getPassword(){
         return System.getenv("TIBCO_EMS_PASSWORD").isEmpty() ? null : System.getenv("TIBCO_EMS_PASSWORD");
+    }
+
+    /**
+     * Reads the environment variable TIBCO_EMS_CERTIFICATE_PATH
+     * @return the TIBCO EMS Certificate File Absolute Path as String
+     */
+    public String getCertificatePath(){
+        return System.getenv("TIBCO_EMS_CERTIFICATE_PATH").isEmpty() ? null : System.getenv("TIBCO_EMS_CERTIFICATE_PATH");
     }
 
     /*

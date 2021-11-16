@@ -21,6 +21,7 @@ public class EmsConsumer implements Runnable{
     private String serverUrl;
     private String userName;
     private String password;
+    private String certificatePath;
 
     private String queueName;
     private String completed;
@@ -53,6 +54,7 @@ public class EmsConsumer implements Runnable{
         this.serverUrl = fosConfig.getEmsServer();
         this.userName = fosConfig.getUser();
         this.password = fosConfig.getPassword();
+        this.certificatePath = fosConfig.getCertificatePath();
 
         this.queueName = _queueName;
         this.responseFile = getResponseFile(fosConfig, _queueName);
@@ -116,9 +118,8 @@ public class EmsConsumer implements Runnable{
     public void run() {
 
         try {
-            String trustedCertFilePath = Utils.getResourceFile("cert.pem").getAbsolutePath();
             Hashtable<String, Object> environment = new Hashtable<>();
-            environment.put("com.tibco.tibjms.ssl.trusted_certs", trustedCertFilePath);
+            environment.put("com.tibco.tibjms.ssl.trusted_certs", this.certificatePath);
             environment.put("com.tibco.tibjms.ssl.expected_hostname", this.serverUrl);
             environment.put("com.tibco.tibjms.ssl.enable_verify_hostname", Boolean.FALSE);
             environment.put("com.tibco.tibjms.ssl.enable_verify_host", Boolean.FALSE);
